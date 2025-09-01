@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "hotbar-auto-refill",
+	"version": "${version}",
+	"name": "Hotbar Auto Refill",
+	"description": "Automatically refills your hotbar and off-hand with matching items from your inventory.",
+	"authors": [
+		"termilu"
+	],
+	"contact": {
+		"homepage": "https://github.com/termilu/freeRealEstate",
+		"sources": "https://github.com/termilu/freeRealEstate"
+	},
+	"license": "MIT",
+	"icon": "assets/hotbar-auto-refill/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.termilu.hotbarautorefill.HotbarAutoRefillClient"
+		]
+	},
+	"mixins": [
+		"hotbar-auto-refill.mixins.json",
+		{
+			"config": "hotbar-auto-refill.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
